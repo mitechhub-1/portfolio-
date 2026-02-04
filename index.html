@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mitechhub | Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* CSS STYLES */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
@@ -41,7 +43,7 @@
             color: #fff;
             text-decoration: none;
             padding: 0 15px;
-            font-weight: bold;
+            font-weight: 600;
             transition: 0.3s;
         }
 
@@ -71,7 +73,7 @@
             background-color: #fff;
         }
 
-        .hero h1 { font-size: 3rem; margin: 10px 0; }
+        .hero h1 { font-size: 3rem; margin: 10px 0; font-weight: 700; }
         .hero h1 span { color: #e67e22; border-right: 3px solid #fff; padding-right: 5px; }
 
         .btn {
@@ -83,6 +85,7 @@
             margin-top: 20px;
             transition: 0.3s;
             display: inline-block;
+            font-weight: 600;
         }
 
         .btn:hover { background: #d35400; transform: scale(1.05); }
@@ -99,27 +102,49 @@
             margin-top: 20px;
         }
 
-        /* JavaScript Animation Class */
         .skill-box {
             background: #f9f9f9;
             padding: 20px 40px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            font-weight: bold;
+            font-weight: 600;
             border-bottom: 4px solid #e67e22;
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.6s ease-out;
         }
 
-        .skill-box.show {
-            opacity: 1;
-            transform: translateY(0);
+        .skill-box.show { opacity: 1; transform: translateY(0); }
+
+        /* CONTACT SECTION */
+        #contact { background: #f9f9f9; }
+        
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
         }
 
-        #contact { background: #2c3e50; color: white; }
-        #contact h2 { color: #e67e22; }
-        .contact-info { margin-top: 20px; font-size: 1.2rem; }
+        .contact-card {
+            width: 280px;
+            padding: 30px;
+            border-radius: 15px;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .contact-card:hover { transform: translateY(-10px); }
+
+        .gmail { background-color: #DB4437; }
+        .whatsapp { background-color: #25D366; }
+
+        .contact-card h3 { margin-bottom: 10px; font-size: 1.5rem; }
+        .contact-card p { font-size: 0.9rem; opacity: 0.9; margin-bottom: 15px; }
+        .contact-card span { font-weight: bold; text-transform: uppercase; font-size: 0.8rem; border: 1px solid white; padding: 5px 10px; border-radius: 5px; }
 
         footer {
             background: #111;
@@ -150,7 +175,7 @@
     </header>
 
     <section id="home" class="hero">
-        <img src="your-photo.jpg" alt="Mitechhub" class="profile-img">
+        <img src="my-picture.jpg" alt="Mitechhub" class="profile-img">
         <h1>Welcome, I am <br><span id="typing"></span></h1>
         <p>Professional Frontend Developer specializing in modern web experiences.</p>
         <a href="#contact" class="btn">Hire Me Now</a>
@@ -167,23 +192,31 @@
     </section>
 
     <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Looking for a developer? Let's talk about your project.</p>
-        <div class="contact-info">
-            <p>📧 Email: <strong>polymath@example.com</strong></p>
-            <p>💬 WhatsApp: <strong>09017090326</strong></p>
+        <h2>Get In Touch</h2>
+        <p>Choose your preferred way to contact me.</p>
+        <div class="contact-container">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=minaalma326@gmail.com" target="_blank" class="contact-card gmail">
+                <h3>Gmail</h3>
+                <p>minaalma326@gmail.com</p>
+                <span>Email Me Now</span>
+            </a>
+
+            <a href="https://wa.me/2349017090326" target="_blank" class="contact-card whatsapp">
+                <h3>WhatsApp</h3>
+                <p>+234 901 709 0326</p>
+                <span>Chat with me</span>
+            </a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Polymath Portfolio. Built with passion.</p>
-        <p class="watermark">king of editing001 09017090326</p>
+        <p>&copy; 2026 Mitechhub Portfolio. All Rights Reserved.</p>
+        <p class="watermark">Mitechhub 09017090326</p>
     </footer>
 
     <script>
-        // 1. Typing Effect
         const textElement = document.getElementById("typing");
-        const words = ["Polymath", "a Web Designer", "a Frontend Developer"];
+        const words = ["Mitechhub", "a Web Designer", "a Frontend Developer"];
         let wordIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
@@ -209,11 +242,8 @@
                 setTimeout(type, isDeleting ? 100 : 200);
             }
         }
-
-        // 2. Scroll Animation for Skills
+        
         const boxes = document.querySelectorAll('.skill-box');
-        window.addEventListener('scroll', checkBoxes);
-
         function checkBoxes() {
             const triggerBottom = window.innerHeight / 5 * 4;
             boxes.forEach(box => {
@@ -224,7 +254,7 @@
             });
         }
 
-        // Start typing and initial scroll check
+        window.addEventListener('scroll', checkBoxes);
         document.addEventListener("DOMContentLoaded", () => {
             type();
             checkBoxes();
