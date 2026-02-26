@@ -1,226 +1,170 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mitechhub | Web Developer & IT Specialist</title>
-    <meta name="description" content="Mitechhub - Professional Web Developer specializing in HTML, CSS, and JavaScript.">
-    <link rel="icon" type="image/png" href="logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0; padding: 0; line-height: 1.6;
-            background-color: #1a1a1a; color: #fff; /* Na mayar da shi dark theme kamar screenshot dinka */
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-        }
-
-        header {
-            background: #2c3e50; color: #fff;
-            padding: 1rem 0; position: fixed;
-            width: 100%; top: 0; z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        nav { display: flex; justify-content: space-around; align-items: center; }
-        nav .logo { font-size: 1.5rem; color: #e67e22; font-weight:bold;}
-        nav ul { display: flex; list-style: none; margin: 0; padding: 0; }
-        nav ul li a { color: #fff; text-decoration: none; padding: 10px 15px; font-weight: 600; transition: 0.3s; }
-        nav ul li a:hover { color: #e67e22; }
-
-        .hero {
-            height: 100vh; display: flex; flex-direction: column;
-            justify-content: center; align-items: center;
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1352&q=80');
-            background-size: cover; background-position: center; color: white; text-align: center; padding: 0 20px;
-        }
-
-        .profile-img {
-            width: 180px; height: 180px;
-            border-radius: 50%; border: 5px solid #e67e22;
-            margin-bottom: 20px; object-fit: cover;
-            box-shadow: 0 0 25px rgba(230, 126, 34, 0.6);
-        }
-
-        .hero h1 { font-size: 3rem; margin: 10px 0; }
-        .hero h1 span { color: #e67e22; }
-        .hero .cta-btn {
-            background: #e67e22; color: white; padding: 12px 30px;
-            border-radius: 50px; text-decoration: none; font-weight: bold;
-            margin-top: 20px; transition: 0.3s;
-        }
-        .hero .cta-btn:hover { background: #cf6c1c; transform: scale(1.05); }
-
-        .foundation-tag {
-            background: rgba(230, 126, 34, 0.1);
-            border: 1px solid #e67e22; color: #fff;
-            padding: 8px 20px; border-radius: 20px;
-            margin: 5px; display: inline-block; font-size: 0.9rem;
-        }
-
-        section { padding: 80px 20px; max-width: 1100px; margin: auto; text-align: center; }
-
-        .about-box {
-            background-color: #222; padding: 40px;
-            max-width: 800px; margin: auto; text-align: left; 
-            border-left: 5px solid #e67e22; border-radius: 0 15px 15px 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px; margin-top: 40px;
-        }
-
-        .project-card {
-            background: #222; border-radius: 15px; overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            transition: 0.3s; text-align: left; border: 1px solid #333;
-        }
-
-        .project-card:hover { transform: translateY(-10px); border-color: #e67e22; }
-        .project-img { width: 100%; height: 200px; object-fit: cover; background: #333; }
-        .project-info { padding: 20px; }
-        .project-info h4 { margin: 0 0 10px 0; color: #e67e22; }
-        .project-info p { font-size: 0.9rem; color: #ccc; }
-
-        .whatsapp-float {
-            position: fixed; width: 65px; height: 65px;
-            bottom: 30px; right: 30px; background-color: #25d366;
-            border-radius: 50px; text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            z-index: 1000; display: flex; align-items: center; justify-content: center;
-            transition: 0.3s;
-            }
-        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 0 20px #25d366; }
-        .whatsapp-float img { width: 40px; height: 40px; }
-        .whatsapp-float img {
-    width: 40px;
-    height: 40px;
-    border-radius: 30px;
-    transition: transform 0.3s ease;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mitechhub | Quality Web Solutions & Client Support</title>
+<meta name="description" content="Mustapha Ibrahim – Dedicated Web Developer at Mitechhub. Building reliable and efficient digital solutions for your business needs.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+:root {
+    --bg: #050505;
+    --bg-light: #f5f5f5;
+    --gold: #c5a059;
+    --text-main: #fff;
+    --text-dim: #a0a0a0;
+    --text-dark: #111;
+    --glass: rgba(255, 255, 255, 0.03);
+    --border: rgba(197, 160, 89, 0.2);
+    --transition: 0.4s ease-in-out;
+    --scroll-top-bg: #c5a059;
 }
-    .whatsapp-float:hover {
-    transform: scale(1.1);
-    background-color: #128c7e;
-    box-shadow: 0 0 25px rgba(37, 211, 102, 0.7); /* Zai fara annuri (glow) */
-}
-    @keyframes pulse {
-     0% { box-shadow: 0 0 0 0px rgba(37, 211, 102, 0.5); }
-     100% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
-    }
+body{margin:0; padding:0; font-family:'Montserrat', sans-serif; background:var(--bg); color:var(--text-main); overflow-x:hidden; transition: background 0.4s, color 0.4s;}
+a{text-decoration:none; color:inherit;}
+.glow{position:fixed; width:600px; height:600px; background:radial-gradient(circle, rgba(197,160,89,0.04)0%,transparent 70%); top:-200px; right:-200px; z-index:-1; transition: background 0.4s;}
+header{position:fixed; width:90%; max-width:1200px; top:25px; left:50%; transform:translateX(-50%); z-index:1000; background: rgba(10,10,10,0.75); backdrop-filter: blur(25px); border:1px solid var(--border); border-radius:100px; padding:12px 30px; transition:var(--transition);}
+nav{display:flex; justify-content:space-between; align-items:center;}
+.logo{font-family:'Playfair Display', serif; font-size:1.5rem; font-weight:900; color:var(--gold); letter-spacing:1px;}
+.nav-links{display:flex; list-style:none; gap:30px; align-items:center;}
+.nav-links a{font-size:0.75rem; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; transition:var(--transition); color: var(--text-dim);}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{background: var(--gold); color:#000; padding:10px 24px; border-radius:50px; font-weight:700; font-size:0.7rem; text-transform:uppercase; transition: var(--transition);}
+.nav-cta:hover{transform:scale(1.05); box-shadow:0 0 15px var(--gold);}
+.hamburger{display:none; flex-direction:column; cursor:pointer; gap:4px;}
+.hamburger div{width:25px; height:3px; background:#fff; border-radius:2px;}
+@media(max-width:768px){.nav-links{display:none; position:absolute; top:70px; right:30px; flex-direction:column; background: rgba(10,10,10,0.95); padding:20px; border-radius:15px; width:200px;}.nav-links.active{display:flex; animation:slideIn 0.3s ease forwards;}.hamburger{display:flex;}}
+@keyframes slideIn{from{opacity:0; transform:translateY(-20px);} to{opacity:1; transform:translateY(0);}}
+.hero{padding:240px 20px 100px; text-align:center; max-width:900px; margin:0 auto; opacity:0; transform:translateY(30px); transition:opacity 0.6s ease, transform 0.6s ease;}
+.profile-img{width:160px; height:160px; border-radius:160px; border:2px solid var(--gold); padding:5px; margin-bottom:25px; object-fit:cover;}
+.hero-subtitle{color:var(--gold); letter-spacing:3px; text-transform:uppercase; font-size:0.85rem; font-weight:700; margin-bottom:15px;}
+.hero h1{font-family:'Playfair Display', serif; font-size:clamp(2.5rem,8vw,4rem); margin-bottom:20px;}
+.hero h1 span{color:var(--gold);}
+.hero-text{font-size:1rem; color:var(--text-dim); max-width:600px; margin:0 auto;}
+section h2{text-align:center; margin-bottom:40px;}
+.services-grid, .grid, .pricing-grid{display:grid; gap:25px; max-width:1200px; margin:60px auto; padding:0 20px;}
+.services-grid{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
+.service-card, .card, .pricing-card{background:var(--glass); border:1px solid var(--border); padding:30px; border-radius:15px; text-align:center; opacity:0; transform:translateY(30px); transition: var(--transition), opacity 0.6s ease, transform 0.6s ease;}
+.service-card:hover, .card:hover, .pricing-card:hover{border-color:var(--gold); transform:translateY(-5px); box-shadow:0 0 20px rgba(197,160,89,0.2);}
+.service-icon{font-size:2rem; color:var(--gold); margin-bottom:15px; display:block;}
+.card img{width:100%; height:220px; object-fit:cover; border-radius:10px; margin-bottom:15px;}
+.card h3,.pricing-card h3,.service-card h3{margin-bottom:10px; color:var(--gold);}
+.card p,.pricing-card p,.service-card p{color:var(--text-dim); font-size:0.9rem; line-height:1.4;}
+.form-box{max-width:650px; margin:60px auto 100px; background:var(--glass); padding:50px; border:1px solid var(--border); border-radius:15px; opacity:0; transform:translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease;}
+input, textarea{width:100%; padding:15px 0; background:transparent; border:none; border-bottom:1px solid #333; color:#fff; margin-bottom:35px; outline:none;}
+.submit-btn{width:100%; padding:18px; background:var(--gold); color:#000; font-weight:700; border:none; cursor:pointer; border-radius:50px; transition:var(--transition);}
+.submit-btn:hover{transform:scale(1.02); box-shadow:0 0 15px var(--gold);}
+footer{background: rgba(10,10,10,0.85); color:var(--text-dim); text-align:center; padding:30px 20px; font-size:0.8rem;}
+footer a{color: var(--gold); text-decoration:none; font-weight:600;}
+footer a:hover{text-decoration:underline;}
+#scrollTopBtn{position:fixed; bottom:30px; right:30px; z-index:100; background:var(--scroll-top-bg); color:#000; border:none; padding:12px 16px; border-radius:50px; cursor:pointer; display:none; transition:0.3s; font-weight:700;}
+#scrollTopBtn:hover{transform:scale(1.1);}
+#modeToggle{position:fixed; bottom:30px; left:30px; background:var(--gold); color:#000; border:none; padding:12px 24px; border-radius:50px; cursor:pointer; font-weight:700; transition:0.3s;}#modeToggle:hover{transform:scale(1.1);}
 
-    .whatsapp-float {
-    animation: pulse 2s infinite;
-    }
-
-        form { max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 15px; background: #222; padding: 30px; border-radius: 15px; }
-        input, textarea { padding: 12px; border-radius: 8px; border:1px solid #444; background: #333; color: #fff; font-family: inherit; }
-        button { background:#e67e22; color:white; padding:15px; border:none; border-radius:50px; font-weight:bold; cursor:pointer; transition:0.3s;}
-        button:hover { background:#cf6c1c; }
-
-        footer { background: #111; color: #888; text-align: center; padding: 40px; border-top: 1px solid #333; }
-    </style>
+/* Na sanya kalar WhatsApp anan */
+.whatsapp-icon { color: #25D366; font-size: 1.2rem; margin-right: 5px; vertical-align: middle; }
+</style>
 </head>
 <body>
+<div class="glow"></div>
+<header id="main-nav"><nav><a href="#home" class="logo">Mitechhub</a><ul class="nav-links"><li><a href="#home">Home</a></li><li><a href="#services">Focus</a></li><li><a href="#work">Work</a></li><li><a href="#pricing">Services</a></li><li><a href="#contact">Contact</a></li></ul><a href="#contact" class="nav-cta">Discuss Your Project</a><div class="hamburger" onclick="toggleMenu()"><div></div><div></div><div></div></div></nav></header>
 
-    <header>
-        <nav>
-            <div class="logo">Mitechhub</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<section class="hero" id="home">
+    <img src="my-picture.jpg" alt="Mustapha Ibrahim – Dedicated Web Developer" class="profile-img">
+    <p class="hero-subtitle">Reliable Web Solutions & Development</p>
+    <h1>Building <span>Value Through Tech</span></h1>
+    <p class="hero-text">I focus on creating high-quality websites that support your business goals, delivered with care and technical expertise.</p>
+</section>
 
-    <section id="home" class="hero">
-        <img src="my-picture.jpg" alt="Mitechhub" class="profile-img" loading="eager">
-        <h1>I am <span id="typing"></span></h1>
-        <p>Crafting Professional Web Experiences with <strong>HTML, CSS & JavaScript</strong>.</p>
-        <a href="#projects" class="cta-btn">View My Work</a>
-        <div style="margin-top: 30px;">
-            <span class="foundation-tag">Numeracy Skills</span>
-            <span class="foundation-tag">Technology Skills</span>
-            <span class="foundation-tag">Literacy Skills</span>
-        </div>
-    </section>
+<section id="services"><h2>Our Dedicated Focus</h2><div class="services-grid"><div class="service-card"><span class="service-icon">🛒</span><h3>E-Commerce Solutions</h3><p>Reliable online stores designed to help your business reach more customers effectively.</p></div><div class="service-card"><span class="service-icon">💼</span><h3>Business Websites</h3><p>Professional websites built to represent your brand with clarity, trust, and excellence.</p></div><div class="service-card"><span class="service-icon">📈</span><h3>Landing Pages</h3><p>Well-crafted pages designed to present your unique services and capture leads.</p></div></div></section>
 
-    <section id="about">
-        <div class="about-box">
-            <h2 style="color: #e67e22; margin-top: 0;">About Me</h2>
-            <p>
-                I am a professional <strong>Web Developer</strong> who specializes in building high-quality, responsive websites. 
-                My core strength lies in <strong>HTML5 and CSS3</strong>, where I focus on creating pixel-perfect designs 
-                that are mobile-friendly and SEO-optimized. 
-                <br><br>
-                To provide a complete digital experience, I incorporate <strong>JavaScript</strong> to add essential 
-                interactivity and dynamic functionality, ensuring that every website I build is not just a static page, 
-                but a functional tool for business growth.
-            </p>
-        </div>
-    </section>
+<section id="work"><h2>Recent Case Studies</h2><div class="grid"><div class="card"><img src="project1.webp" alt="Royal African Fabrics"><h3>Royal African Fabrics</h3><p><strong>Goal:</strong> Improve online presence</p><p><strong>Method:</strong> Thoughtful redesign & technical optimization</p><p><strong>Outcome:</strong> Noticeable improvement in user engagement</p></div><div class="card"><img src="project2.webp" alt="Luxury Fashion Store"><h3>Luxury Fashion Store</h3><p><strong>Goal:</strong> Better brand representation</p><p><strong>Method:</strong> Clean interface design + efficient lead forms</p><p><strong>Outcome:</strong> Stronger digital identity and customer trust</p></div></div></section>
 
-    <section id="projects">
-        <h2>My Completed Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <img src="E-commerce.jpg" alt="E-commerce" class="project-img" loading="lazy" onerror="this.src='https://via.placeholder.com/400x200?text=E-commerce'">
-                <div class="project-info">
-                    <h4>E-commerce Solution</h4>
-                    <p>Built with HTML5, CSS3, and JS logic for seamless shopping.</p>
-                </div>
-            </div>
-            </div>
-    </section>
+<section id="pricing"><h2>Service Packages</h2><div class="pricing-grid">
+<div class="pricing-card"><h3>Essential Launch</h3><p>Focused single-page solution designed for clarity and speed. Ideal for new ideas and simple presentations.</p></div>
+<div class="pricing-card" style="border-color: var(--gold);"><h3>Standard Growth</h3><p>Comprehensive multi-page website with SEO support and mobile-first design for growing brands.</p></div>
+<div class="pricing-card"><h3>Custom Solution</h3><p>Bespoke development tailored strictly to your specific business requirements and complex goals.</p></div>
+</div><div style="text-align:center; margin-top:30px;"><a href="#contact" class="nav-cta">Let's Discuss Your Needs</a></div></section>
 
-    <section id="contact">
-        <h2>Hire Me Today</h2>
-        <form action="https://formspree.io/f/xaqddngr" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+<section id="contact"><h2>Get in Touch</h2><div class="form-box">
+    <form action="https://formspree.io/f/xaqddngr" method="POST" id="contactForm">
+        <input type="text" name="name" placeholder="Full Name / Company Name" required>
+        <input type="email" name="email" placeholder="Your Email Address" required>
+        <textarea name="message" rows="4" placeholder="Tell me about your project goals" required></textarea>
+        <button type="submit" class="submit-btn" id="submitBtn">Send Your Inquiry</button>
+    </form>
+    <p style="margin-top:20px; text-align:center;">
+        <i class="fab fa-whatsapp whatsapp-icon"></i> WhatsApp Support: 
+        <a href="https://wa.me/2349017090326" target="_blank" style="color: var(--gold); font-weight:600;">+234 901 709 0326</a>
+    </p>
+</div></section>
 
-    <a href="https://wa.me/2349017090326" class="whatsapp-float" target="_blank">
-        <img src="W.jpg" alt="WhatsApp" loading="lazy" onerror="this.src='https://cdn-icons-png.flaticon.com/512/733/733585.png'">
-    </a>
+<footer>&copy; 2026 Mitechhub | Dedicated to Quality Work and ClientSatisfaction | <a href="#contact">Contact</a></footer>
+<button id="scrollTopBtn" onclick="scrollToTop()">Top</button>
+<button id="modeToggle" onclick="toggleMode()">Eye Care</button>
 
-    <footer>
-        <p>&copy; 2026 Mitechhub | Phone: 09017090326</p>
-    </footer>
+<script>
+function toggleMenu(){document.querySelector('.nav-links').classList.toggle('active');}
+function scrollToTop(){window.scrollTo({top:0, behavior:'smooth'});}
+function toggleMode(){
+    const btn = document.getElementById('modeToggle');
+    document.body.classList.toggle('light-mode');
+    if(document.body.classList.contains('light-mode')){
+        document.body.style.background='var(--bg-light)';
+        document.body.style.color='var(--text-dark)';
+        btn.innerText = 'Eye Care';
+    }else{
+        document.body.style.background='var(--bg)';
+        document.body.style.color='var(--text-main)';
+        btn.innerText = 'Eye Care';
+    }
+}
+window.onscroll=function(){
+    const header=document.getElementById('main-nav');
+    header.style.width = window.pageYOffset>50?'85%':'90%';
+    document.getElementById('scrollTopBtn').style.display=window.pageYOffset>300?'block':'none';
+    document.querySelectorAll('.service-card, .card, .pricing-card, .form-box').forEach(el=>{
+        const rect=el.getBoundingClientRect();
+        if(rect.top < window.innerHeight-50){el.style.opacity='1'; el.style.transform='translateY(0)';}
+    });
+};
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){e.preventDefault(); const target=document.querySelector(this.getAttribute('href')); if(target) target.scrollIntoView({behavior:'smooth', block:'start'}); document.querySelector('.nav-links').classList.remove('active');});});
+window.onload=function(){document.querySelectorAll('.hero, .service-card, .card, .pricing-card, .form-box').forEach(el=>{el.style.opacity='1'; el.style.transform='translateY(0)';});};
 
-    <script>
-        const textElement = document.getElementById("typing");
-        const words = ["Mitechhub", "a Web Developer", "an IT Specialist", "a Graphic Designer"];
-        let wordIndex = 0; let charIndex = 0; let isDeleting = false;
+// Formspree AJAX logic
+const form = document.getElementById("contactForm");
+const btn = document.getElementById("submitBtn");
 
-        function type() {
-            const currentWord = words[wordIndex];
-            if (isDeleting) {
-                textElement.textContent = currentWord.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                textElement.textContent = currentWord.substring(0, charIndex + 1);
-                charIndex++;
-            }
+form.addEventListener("submit", async function(event) {
+    event.preventDefault();
+    btn.innerText = "Sending...";
+    btn.disabled = true;
 
-            if (!isDeleting && charIndex === currentWord.length) {
-                isDeleting = true; setTimeout(type, 2000);
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false; wordIndex = (wordIndex + 1) % words.length;
-                setTimeout(type, 500);
-            } else {
-                setTimeout(type, isDeleting ? 100 : 200);
-            }
+    const data = new FormData(event.target);
+    fetch(event.target.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        if (response.ok) {
+            btn.innerText = "Success! Message Sent";
+            btn.style.background = "#28a745";
+            form.reset();
+            setTimeout(() => {
+                btn.innerText = "Send Your Inquiry";
+                btn.style.background = "var(--gold)";
+                btn.disabled = false;
+            }, 5000);
+        } else {
+            btn.innerText = "Error! Try Again";
+            btn.style.background = "#dc3545";
+            btn.disabled = false;
         }
-        document.addEventListener("DOMContentLoaded", type);
-    </script>
+    }).catch(error => {
+        btn.innerText = "Network Error";
+        btn.disabled = false;
+    });
+});
+</script>
 </body>
 </html>
+
